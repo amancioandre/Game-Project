@@ -10,7 +10,7 @@ let frames = 0;
 
 function setup(){
     createCanvas(1000,400);
-    song = loadSound('./js/paragon.mp3', () => {
+    song = loadSound('./js/truth inside.mp3', () => {
         song.play();
     });
     button = createButton('play/pause')
