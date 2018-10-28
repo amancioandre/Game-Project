@@ -16,6 +16,10 @@ class Player {
         //jumping function
     }
 
+    climb() {
+        //how to grip and climb a wall? hold y position while something?
+    }
+
     walkForward() {
         //walk forwards
     }

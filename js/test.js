@@ -10,7 +10,7 @@ let frames = 0;
 
 function setup(){
     createCanvas(1000,400);
-    song = loadSound('./js/charon.mp3', () => {
+    song = loadSound('./js/paragon.mp3', () => {
         song.play();
     });
     button = createButton('play/pause')
@@ -54,7 +54,7 @@ function draw(){
     beginShape();
     volArray.forEach((vol,i) => {
         let y = map(vol, 0, 0.5, 20, height);
-        rect(i*10, height-20, 10, -y);
+        rect(i*2, height-20, 2, -y);
         
     })
     endShape();
