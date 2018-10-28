@@ -12,4 +12,6 @@ function body(player){
     stroke(255);
 }
 
-function leftArm(player)
+function leftArm(player){
+    rect(player.x, player.y, -20, -20);
+}

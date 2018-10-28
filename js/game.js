@@ -11,6 +11,3 @@ function foreground(){
     //Build and stack foreground mood properties and animations here;
 }
 
-function characterCreation(player){
-    //Import character properties
-}
