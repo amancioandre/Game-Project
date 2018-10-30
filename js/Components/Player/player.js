@@ -20,16 +20,13 @@ class Player {
   }
 
   render() {
-    rect(this.x, this.y, 20, 20, 5);
+    rect(this.x, this.y, 20, 20);
   }
 
   // ###################### BUILD MODULE ############################
 
 
   // ###################### MOTION FUNCTIONS ########################
-  jump() {
-    //
-  }
 
   boost() {
     // if down arrow near wall, boost the other player jump
@@ -49,30 +46,22 @@ class Player {
     this.y += this.speedY;
 
     this.speedY *= 0.8; // damping
-    this.speedX *= 0.6; // damping
+    this.speedX *= 0.8; // damping
 
     // DIRECTIONS
     if (this.right) {
-      this.speedX += 8;
+      this.speedX += 3;
     }
     if (this.left) {
-      this.speedX -= 8;
+      this.speedX -= 3;
     }
-  }
-
-  jump(arr) {
-    arr.forEach((e) => {
-      if ((this.x > e.x && this.x < e.x + 20) && (this.y < -e.y + 20)) {
-        console.log(`xo: ${this.x}, xb: ${e.x}, yo: ${this.y}, yb: ${e.y}`);
-        if (this.spacebar && this.jumping === false) {
-          this.speedY -= 50;
-          this.jumping = true;
-        } else if (this.y > 0) {
-          this.jumping = false;
-          this.y = -e.y;
-          this.speedY = 0;
-        }
-      }
-    });
+    if (this.spacebar && this.jumping === false) {
+      this.speedY -= 80;
+      this.jumping = true;
+    } else if(this.y > 0) {
+      this.jumping = false;
+      this.y = 0;
+      this.speedY = 0;
+    }
   }
 }
