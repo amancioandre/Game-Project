@@ -7,9 +7,13 @@ class Player {
     this.y = h - 100;
 
     this.spacebar = false;
-    this.jumping = true;
     this.left = false;
     this.right = false;
+    this.up = false;
+
+    this.jumping = true;
+    this.climb = false;
+    this.boost = false;
 
     this.speedX = 0;
     this.speedY = 0;
@@ -32,12 +36,6 @@ class Player {
     // if down arrow near wall, boost the other player jump
   }
 
-  climb() {
-    // how to grip and climb a wall? hold y position while something?
-
-    // if up arrow near wall, then climb
-  }
-
   move() {
     // FISICS
     this.speedY += this.gravity; // gravity
@@ -55,8 +53,11 @@ class Player {
     if (this.left) {
       this.speedX -= 3;
     }
+    if (this.up && this.climb) {
+      this.speedY -= 5;
+    }
     if (this.spacebar && this.jumping === false) {
-      this.speedY -= 80;
+      this.speedY -= 40;
       this.jumping = true;
     } else if(this.y > 0) {
       this.jumping = false;

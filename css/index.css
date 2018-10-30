@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -9,13 +14,19 @@ nav {
   width: 100%;
   height: 60px;
   color: white;
-  background-color: rgb(30, 0, 31);
+  background-color: rgb(14, 3, 14);
   position: fixed;
   top: 0;
   left: 0;
   display: flex;
   justify-content: space-between;
   justify-items: baseline;
+}
+
+nav img {
+  height: 40px;
+  margin: 10px 20px;
+  transform: scaleX(-1);
 }
 
 nav ul {
@@ -31,8 +42,36 @@ nav ul li {
   font-size: 0.8rem;
 }
 
+nav ul a,
+nav ul a:hover,
+nav ul a:visited {
+  text-decoration: none;
+  color: white;
+}
+
 #game {
   margin: 60px 0 0 0;
   width: 100%;
   height: 93.5vh;
+}
+
+#instructions {
+  background-color: rgb(14, 3, 14);
+  width: 100%;
+  height: 100vh;
+  color: white;
+}
+
+#about {
+  background-color: rgb(15, 15, 15);
+  width: 100%;
+  height: 50vh;
+  color: white;
+}
+
+footer {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 400px;
+  color: white;
 }
