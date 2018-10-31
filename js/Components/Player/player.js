@@ -1,7 +1,7 @@
 console.log('player.js loaded');
 
 class Player {
-  constructor(name, _gender) {
+  constructor(name) {
     this.name = name;
     this.x = 0;
     this.y = h - 100;
@@ -26,11 +26,6 @@ class Player {
   render() {
     rect(this.x, this.y, 20, 20);
   }
-
-  // ###################### BUILD MODULE ############################
-
-
-  // ###################### MOTION FUNCTIONS ########################
 
   boost() {
     // if down arrow near wall, boost the other player jump
@@ -64,5 +59,9 @@ class Player {
       this.y = 0;
       this.speedY = 0;
     }
+  }
+
+  checkPoints(music) {
+    this.score = (music.duration()*100 - music.currentTime).toFixed()
   }
 }

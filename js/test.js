@@ -15,6 +15,68 @@ let y;
 let x = 0;
 const frames = 0;
 
+
+
+w = $('#game').width();
+h = $('#game').height();
+
+let topology = new Topology(w,h,0);
+
+function preload() {
+  
+}
+
+// function setup() {
+//   const screen = createCanvas(w, h);
+//   screen.parent('game');
+//   player = new Player();
+//   song = loadSound('../Media/music/truth inside.mp3', loaded);
+//   amp = new p5.Amplitude();
+//   frameRate(40);
+// }
+
+function setup() {
+
+  const screen = createCanvas(w, h);
+  screen.parent('game');
+
+  topology.levelLoader(LEVEL_ARRAY);
+}
+
+function draw() {
+  background(0);
+  translate(0,h)
+  fill(255);
+  topology.backgroundRender();
+  topology.renderBars();
+}
+
+// function draw() {
+//   translate(w / 3 - player.x - 10, h - 50);
+//   background(2, 0, 0);
+
+//   if (amp.getLevel() !== 0) {
+//     bars.push({
+//       y: map(amp.getLevel(), 0, 0.5, 0, h),
+//       x: (x += 20)
+//     });
+//   }
+
+
+//   stroke(0);
+//   fill(255);
+//   beginShape();
+//   bars.forEach((bar) => {
+//     rect(bar.x, 20, 20, -bar.y);
+//   });
+//   endShape();
+
+//   fill(255, 0, 0);
+//   player.render();
+//   player.move();
+//   checkPlatform(bars, player);
+// }
+
 const bars = [
   // { x: 60, y: 20 },
   // { x: 80, y: 20 },
@@ -36,78 +98,3 @@ const bars = [
   // { x: 380, y: 40 },
   // { x: 400, y: 40 },
 ];
-
-w = $('#game').width();
-h = $('#game').height();
-
-function preload() {
-  
-}
-
-function setup() {
-  const screen = createCanvas(w, h);
-  screen.parent('game');
-  player = new Player();
-  song = loadSound('../Media/music/truth inside.mp3', loaded);
-  amp = new p5.Amplitude();
-  frameRate(40);
-}
-
-function loaded() {
-  song.play();
-}
-
-function draw() {
-  translate(w / 3 - player.x - 10, h - 50);
-  background(2, 0, 0);
-
-  if (amp.getLevel() !== 0) {
-    bars.push({
-      y: map(amp.getLevel(), 0, 0.5, 0, h),
-      x: (x += 20)
-    });
-  }
-
-
-  stroke(0);
-  fill(255);
-  beginShape();
-  bars.forEach((bar) => {
-    rect(bar.x, 20, 20, -bar.y);
-  });
-  endShape();
-
-  fill(255, 0, 0);
-  player.render();
-  player.move();
-  checkPlatform(bars, player);
-}
-
-function checkPlatform(bars, player) {
-  let i = parseInt((player.x) / 20 - 1);
-  // console.log(i)
-
-  if (bars[i]) {
-    if (bars[i - 1]) {
-      if (20 < bars[i - 1].y + player.y && player.x >= bars[i - 1].x + 20) {
-        player.x = bars[i].x + 20;
-        player.climb = true;
-      }
-    }
-    if (player.x >= bars[i].x - 20 && player.x <= bars[i].x + 20) {
-      if (player.y > -bars[i].y) {
-        player.jumping = false;
-        player.climb = false;
-        player.y = -bars[i].y;
-        player.speedY = -player.gravity;
-      }
-    }
-    if (bars[i + 1]) {
-      if (20 < bars[i + 1].y + player.y && player.x > bars[i + 1].x - 20) {
-        player.x = bars[i].x;
-        player.climb = true;
-      }
-    }
-  }
-}
-

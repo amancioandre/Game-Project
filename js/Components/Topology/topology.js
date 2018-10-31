@@ -4,9 +4,10 @@ class Topology {
     
     this.start_position = start_position; // X start position
     this.width = 20; //Bars Width
-    this.height = map(this.amplitude.getLevel(), 0, 1, 0, HEIGHT); //Map Amplitude Levels to the Canvas Height
+    this.height = HEIGHT; //Map Amplitude Levels to the Canvas Height
 
     this.level = []; //Loaded Musics Array
+    this.bars = [];
     this.mood =  //Music Color Moods and Forms Array of Objects
       {
         anxiety:       ['#23002F', '#221E53', '#1A595E', '#188B52', '#2F9E4F'],
@@ -17,28 +18,46 @@ class Topology {
   }
 
   levelLoader(levelArray) {
-    levelArray.map((level, i) => {
-      this.level[i].music = loadSound(level.path);
-      this.level[i].mood = level.mood;
-      this.level[i].name = level.name;
+    levelArray.forEach((level) => {
+      this.level.push({
+        music: loadSound(level.path),
+        mood: level.mood,
+        name: level.name
+      });
     })
   }
 
   renderBars() {
-    let bars = [];
-    if(this.height !== 0){
-      bars = push({y: -this.height, x: this.start_position += this.width})
+    if(this.amplitude.getLevel() !== 0){
+      this.bars.push({y: map(this.amplitude.getLevel(), 0, 1, 0, this.height), x: this.start_position += this.width})
     }
-    bars.forEach(bar => {
-      rect()
-    })
+    if(this.bars.length > 0){
+      this.bars.forEach(bar => {
+        rect(bar.x, 0, this.width, -bar.y);
+      })
+    }
   }
 
   backgroundRender() {
-    switch (this.currentLevel) {
-      case 0:
-        background(this.mood.anxiety[random(0, 5)]);
-        break;
+    let time = this.level[0].music.currentTime();
+    let totalTime = this.level[0].music.duration();
+    let index = 0;
+
+    if(time/totalTime <= 0.20){
+      index = 0;
+    } else if(time/totalTime > 0.20 && time/totalTime <= 0.40){
+      index = 1;
+    } else if(time/totalTime > 0.40 && time/totalTime <= 0.60){
+      index = 2;
+    } else if(time/totalTime > 0.60 && time/totalTime <= 0.80){
+      index = 3;
+    }else if(time/totalTime > 0.80){
+      index = 4;
     }
+    background(this.mood.anxiety[index]);
+  }
+
+  foregroundRender() {
+    //Colocar formas para renderizar.
   }
 }

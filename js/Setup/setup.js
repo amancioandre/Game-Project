@@ -1,3 +1,5 @@
+console.log('setup.js loaded')
+
 // Musics Array
 const LEVEL_ARRAY = [
   { name: 'Charon', path: '../../Media/music/charon.mp3', mood: 'angry' },
@@ -5,8 +7,15 @@ const LEVEL_ARRAY = [
   { name: 'Truth Inside', path: '../../Media/music/truth inside.mp3', mood: 'anxiety' },
 ]
 
-// GAME FUNCTIONS
+// WINDOW SETUP
+window.addEventListener('keydown', (e) => {
+  // space and arrow keys
+  if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+    e.preventDefault();
+  }
+}, false);
 
+// GAME FUNCTIONS
 function checkPlatform(bars, player) {
   let i = parseInt((player.x) / 20 - 1);
   // console.log(i)
