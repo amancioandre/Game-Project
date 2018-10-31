@@ -1,5 +1,5 @@
 class Topology {
-  constructor(WIDTH, HEIGHT, start_position) {
+  constructor(_WIDTH, HEIGHT, start_position) {
     this.amplitude = new p5.Amplitude();
     
     this.start_position = start_position; // X start position
@@ -17,7 +17,7 @@ class Topology {
       };
   }
 
-  levelLoader(levelArray) {
+  loader(levelArray) {
     levelArray.forEach((level) => {
       this.level.push({
         music: loadSound(level.path),
@@ -57,7 +57,7 @@ class Topology {
     background(this.mood.anxiety[index]);
   }
 
-  foregroundRender() {
+  foregroundRender(player) {
     //Colocar formas para renderizar.
   }
 }

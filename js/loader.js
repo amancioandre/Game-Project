@@ -1,4 +1,7 @@
-window.onload(() => {
+let w = $('#game').width();
+let h = $('#game').height();
+
+window.onload = () => {
     //start game button and other procedures.
     // WINDOW SETUP
     window.addEventListener('keydown', (e) => {
@@ -10,4 +13,5 @@ window.onload(() => {
 
     window.addEventListener('keydown', game.keyState);
     window.addEventListener('keyup', game.keyState);
-})
+}
+

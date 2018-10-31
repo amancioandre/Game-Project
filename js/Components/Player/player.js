@@ -4,7 +4,7 @@ class Player {
   constructor(name) {
     this.name = name;
     this.x = 0;
-    this.y = h - 100;
+    this.y = 0;
 
     this.spacebar = false;
     this.left = false;
@@ -24,14 +24,14 @@ class Player {
   }
 
   render() {
-    rect(this.x, this.y, 20, 20);
+    rect(this.x, this.y, 20, -20);
   }
 
   boost() {
     // if down arrow near wall, boost the other player jump
   }
 
-  move() {
+  update() {
     // FISICS
     this.speedY += this.gravity; // gravity
 

@@ -28,7 +28,10 @@ Walk and Jump Easing:
 https://github.com/frankarendpoth/frankarendpoth.github.io/blob/master/content/pop-vlog/javascript/2017/009-control/control.js
 
 Collision and Bars:
+This section needs improvement, a lot!
 
+Sprite Sheets:
+https://github.com/processing/p5.js/issues/1567
 
 ########################## EASTER EGGS ####################################
 I encourage you guys to call pull requests into this repository with easter
