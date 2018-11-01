@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 console.log('player.js loaded');
 
 class Player {
@@ -19,16 +21,10 @@ class Player {
     this.speedY = 0;
     this.gravity = 4;
     this.score = 0;
-
-    // this.character = new Character(gender);
   }
 
   render() {
     rect(this.x, this.y, 20, -20);
-  }
-
-  boost() {
-    // if down arrow near wall, boost the other player jump
   }
 
   update() {
@@ -54,7 +50,7 @@ class Player {
     if (this.spacebar && this.jumping === false) {
       this.speedY -= 40;
       this.jumping = true;
-    } else if(this.y > 0) {
+    } else if (this.y > 0) {
       this.jumping = false;
       this.y = 0;
       this.speedY = 0;
@@ -62,6 +58,6 @@ class Player {
   }
 
   checkPoints(music) {
-    this.score = (music.duration()*100 - music.currentTime).toFixed()
+    this.score = (music.duration() * 100 - music.currentTime).toFixed();
   }
 }
