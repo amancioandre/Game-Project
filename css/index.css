@@ -22,6 +22,7 @@ nav {
   display: flex;
   justify-content: space-between;
   justify-items: baseline;
+  z-index: 100;
 }
 
 nav img {

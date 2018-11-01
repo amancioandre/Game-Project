@@ -15,4 +15,13 @@ window.onload = () => {
 
   window.addEventListener('keydown', game.keyState.bind(game));
   window.addEventListener('keyup', game.keyState.bind(game));
+
+  //BUTTONS SETUP
+    // NAV BUTTONS
+  let start = document.getElementById('start')
+  let pause = document.getElementById('pause')
+
+
+  start.addEventListener('click', startGame);
+  pause.addEventListener('click', pauseGame)
 };

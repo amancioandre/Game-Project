@@ -1,0 +1,30 @@
+#menu {
+  position: absolute;
+  z-index: 10;
+  display: none;
+  top: 40vh;
+  left: calc(50vw - 250px);
+  width: 500px;
+  height: 300px;
+  border: 2px solid #160416;
+  border-radius: 15px;
+  background-color: #161616;
+  color: white;
+}
+
+.btn {
+  width: 200px;
+  height: 50px;
+  outline: none;
+  background-color: #160416;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 5px 5px black;
+}
+
+.btn:hover {
+  box-shadow: none;
+}

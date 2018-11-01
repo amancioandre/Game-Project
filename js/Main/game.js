@@ -11,6 +11,8 @@ class Game {
   constructor(w, h, startPos) {
     this.players = [];
     this.topology = new Topology(w, h, startPos);
+
+    this.loop = true;
   }
 
   // PLAYERS
@@ -122,7 +124,7 @@ class Game {
     const xF = this.topology.bars[this.topology.bars.length - 1].x;
     beginShape();
     fill(0, 0, 255);
-    rect(xF  0, 5, -300);
+    rect(xF, 0, 5, -300);
     vertex(xF + 5, -300);
     vertex(xF + random(40, 70), -270);
     vertex(xF + 5, -240);
