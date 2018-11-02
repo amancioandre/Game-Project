@@ -28,7 +28,7 @@ class Player {
   }
 
   update() {
-    // FISICS
+    // PHYSICS
     this.speedY += this.gravity; // gravity
 
     this.x += this.speedX;
