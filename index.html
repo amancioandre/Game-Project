@@ -33,34 +33,63 @@
       <div>
         <img src="./Media/images/icons/sound-waves.png" alt="icon">
         <h1>Chill out, dude!</h1>
-        <p id="quote">"Without craftsmanship, inspiration is mere reed shaken in the wind" [Dr. Brahms]</p>    
+        <p id="quote">"Without craftsmanship, inspiration is mere reed shaken in the wind" [Dr. Brahms]</p>
       </div>
       <div>
-          <button id="onePlayer" class="btn">One Player</button>
-          <button id="twoPlayers" class="btn">Two Players</button>
+        <button id="onePlayer" class="btn">One Player</button>
+        <button id="twoPlayers" class="btn">Two Players</button>
       </div>
     </div>
   </section>
   <section id="instructions">
-    <h2>Game Instructions!</h2>
+    <h2>Game <span>Instructions!</span></h2>
     <div class="pitch">
       <h4>The Game Lore</h4>
-      <p>After all wars the world collaped into a massive desert.
-        Inside this massive beast the only thing that could exist is pressure.
+      <p>
+        After all wars the world collaped into a massive desert.
+        Inside this beast the only thing that could exist is pressure.
       </p>
     </div>
     <div class="movements">
       <h4>Players Movement</h4>
       <div class="controls">
-        <div class="spacebar"><i class="icon window minimize"></i></div>
-        <ul>
+        <div class="spacebar"></i></div>
+        <ul class="player1">
           <li><i class="upper-left icon"></i></li>
           <li><i class="upper-middle icon caret square up"></i></li>
           <li><i class="upper-right icon"></i></li>
+          <li></li>
           <li><i class="icon caret square left"></i></li>
           <li><i class="icon caret square down"></i></li>
           <li><i class="icon caret square right"></i></li>
+          <li>INS</li>
         </ul>
+        <div>
+          <h4>Player <span>One</span>: </h4>
+          <p>The <span>right</span> and <span>left</span> arrows move the player along the level.
+            Use <span>up</span> near a wall to climb it. Not to fly all over the level!
+            <span> Ins</span> is used to jump a moderate humanly possible amount.
+          </p>
+        </div>
+        <ul class="player2">
+          <li style="border: none; box-shadow: none"></li>
+          <li>W</li>
+          <li style="border: none; box-shadow: none"></li>
+          <li style="border: none; box-shadow: none"></li>
+          <li style="border: none; box-shadow: none"></li>
+          <li style="border: none; box-shadow: none"></li>
+          <li>A</li>
+          <li>S</li>
+          <li>D</li>
+          <li style="width: 75px;"><i class="icon window minimize"></i></li>
+        </ul>
+        <div>
+          <h4>Player <span>Two</span>: </h4>
+          <p>The <span>A</span> and <span>D</span> arrows move the player along the level.
+            Use <span>W</span> near a wall to climb it. Not to fly all over the level!
+            <span>SPACE</span> is used to jump a moderate humanly possible amount.
+          </p>
+        </div>
       </div>
       <p>Use the arrows left and right to control your character <strong>run</strong> to the left or right.</p>
       <p>Use the up arrow near a wall to <strong>climb</strong> it.</p>
@@ -77,33 +106,66 @@
   <section id="about">
     <div>
       <h2>About the Game Idea</h2>
-      <p>We've always wished to feel music, travel along it within our memories and feelings. This game is a tribute to
-        this desire, a sinestesic feel to music and sound. We try to imagine sound, we figured out how its fisics works
-        but we've never climbed it, jumped over it, exhilirate ourselves by touching it.</p>
+      <ul>
+        <li>This game was offered as a starting project for the Full Stack Web Development bootcamp, by Ironhack. The
+          idea
+          consisted of practicing our fresh Frontend and Canvas skills with a free theme. I've pushed the boundaries a
+          little
+          bit further, once I was feeling comfortable with JavaScript and Canvas.
+        </li>
+        <li>Thus the idea could be improved to a level where we could experience fome kind of innovation, diverting
+          someway of the status quo:</li>
+        <li>We've always wished to <span>feel music</span>, travel along it within our memories and feelings. This game
+          is a tribute to
+          this desire, a sinestesic feel to music and sound. We try to imagine sound, we figured out how its fisics
+          works
+          but we've never climbed it, jumped over it, exhilirate ourselves by touching it.</li>
+      </ul>
     </div>
     <div>
       <h2>Methodology</h2>
-      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum."</p>
+      <ul>
+        <li><span>Conceptual Design</span>, at this phase the main idea of the game was iterated among several
+          possibilities, but tagging the possibilites of p5.sound.
+          These concepts involved platform, rpg, GuitarHero clones with storytelling (a Star Wars storytelling) and
+          sound making with envelopes. At the end, observing the
+          time and scope restrictions, it was decided to make this platform game. Given that this generates level
+          topology based on the music amplitude distribution over time, thus
+          building unique levels.</li>
+        <li><span>Preliminar Degisn</span> was conducted with testing in mind. The development here was driven, with
+          some extention of planning, by trial and error.
+          This approach revealed time consumming but very important for building algorithm coding skills for gaming and
+          DOM manipulation. It also improved creativity to
+          implement new game mechanics.</li>
+        <li>And, finally, <span>Detailed Design and Prototype Deployment</span>. At this level the MVP was prepared to
+          be deployed on GitHub pages. Code was organized and distributed among meaningull files and classes and, for
+          the new platform, new debugging tooks place.</li>
+      </ul>
     </div>
     <div>
       <h2>Bugs and Known Issues</h2>
-      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum."</p>
+      <ul>
+        <li><span>Climbing</span> is, at the moment, missbehavioring. When you climb a wall and keep pressing up the
+          player fly. (Whole new ideas for that).</li>
+        <li><span>Player Flickering</span> is still an issue and will be dealt with within the next patch, this
+          christmas.</li>
+        <li><span>Level changing</span> is not yet implemented, keep an eye for the next chapters.</li>
+        <li><span>Boosting Players</span> has been an issue: a mad mad mad horse to be tamed by these fingers who type
+          here.</li>
+        <li><span>Pause</span> button is working before game starts! Have to fix this...</li>
+        <li><span>Have an issue?</span> Report here... oh wait, node.js yet to be coded.</li>
+      </ul>
     </div>
     <div>
       <h2>Credits</h2>
-      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum."</p>
+      <ul>
+        <li><a href="https://www.ironhack.com/en" target="_blank">Ironhack</a>, for the top knotch Web Development
+          classes.</li>
+        <li><a href="https://p5js.org/" target="_blank">p5.js</a>, with a special thanks to <a href="https://www.youtube.com/channel/UCvjgXvBlbQiydffZU7m1_aw"
+            target="_blank">Daniel Shiffman</a> and his awesome video tutorials on YouTube.</li>
+        <li><a href="http://freemusicarchive.org/music/Keosz/" target="_blank">Keosz</a>, an outstanding musician that
+          shared his precious work under CC BY 4.0 from Free Music Archive</li>
+      </ul>
     </div>
   </section>
   <footer id="contact">
@@ -112,16 +174,18 @@
         <img src="./Media/images/me.jpeg" alt="me">
         <h3>André Amâncio de Moraes <i class="github alternate"></i></h3>
         <p>Fullstack JavaScript Web Developer - <strong>MERN</strong> <strong>Ironhack</strong></p>
+        <p>I'm passionate about <strong>creativity</strong> and <strong>challenging</strong> myself and I'm always
+          dreaming about new ways to see the world around us.</p>
       </div>
     </div>
     <div>
-      <p>Master in Mechanical Engineering and Mechanical Engineer since 2016,</p>
-      <p>I'm passionate about creativity and challenging myself and I'm always
-        dreaming about new ways to see the world around us.</p>
+      <p>Master in Mechanical Engineering for <strong>Product Development</strong> and Mechanical Engineer since 2016,
+        I've travelling the road of development with curiosity, passion and professionalism.</p>
+
       <ul>
-        <li><a href=""><i class="icon github alternate"></i></a></li>
-        <li><a href=""><i class="icon linkedin alternate"></i></a></li>
-        <li><a href=""><i class="icon medium alternate"></i></a></li>
+        <li><a href="https://github.com/amancioandre/" target="_blank"><i class="icon github alternate"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/amancioandre/" target="_blank"><i class="icon linkedin alternate"></i></a></li>
+        <li><a href="https://medium.com/@amancioandre" target="_blank"><i class="icon medium alternate"></i></a></li>
       </ul>
     </div>
   </footer>

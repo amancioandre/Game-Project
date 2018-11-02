@@ -29,5 +29,5 @@ window.onload = () => {
   twoPlayers.addEventListener('click', () => {
     startGame(2)
   });
-  pause.addEventListener('click', pauseGame)
+  pause.addEventListener('click', pauseGame);
 };

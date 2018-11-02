@@ -58,40 +58,127 @@ nav ul a:visited {
 }
 
 #instructions {
+  padding: 80px 50px;
   background-color: rgb(14, 3, 14);
   width: 100%;
-  height: 500px;
   color: white;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
+
+#instructions div {
+  width: 400px;
+}
+
+#instructions h2 {
+  width: 400px;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+#instructions span {
+  color: 
+}
+
+#instructions h4 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+#instructions ul {
+  margin: 30px 0 20px 0;
+  width: 100px;
+  height: 50px;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+#instructions ul li {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  font-size: 24px;
+}
+
+#instructions .player2 {
+  width: 200px;
+}
+
+#instructions .player2 li {
+  font-size: 16px;
+  border: 2px solid white;
+  border-radius: 2px;
+  margin: 2px;
+  box-shadow: 0 2px white;
+}
+
+
 
 #about {
   background-color: rgb(15, 15, 15);
   width: 100%;
-  height: 50vh;
   color: white;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 50px;
   box-sizing: border-box;
 }
 
-#about div {
-  width: 200px;
+#about span {
+  color: #5F008A;
+  text-decoration: underline dashed #5F008A;
 }
+
+#about div {
+  width: 400px;
+  text-align: justify;
+}
+
+#about p {
+  font-size: 1.2rem;
+}
+
+#about i {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+#about h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 0 0 30px 0;
+}
+
+#about ul {
+  list-style-type: none;
+}
+
+#about ul li {
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
+
 
 footer {
   background-color: rgb(0, 0, 0);
   width: 100%;
-  height: 400px;
+  height: 600px;
   padding: 50px;
   color: white;
   display: flex;
+  flex-flow: column wrap;
   justify-content: space-evenly;
   box-sizing: border-box;
 }
 
 footer div {
-  width: 450px;
+  width: 550px;
 }
 
 footer img {
@@ -100,10 +187,32 @@ footer img {
   filter: grayscale(100%);
 }
 
-footer ul,
-footer a {
-  text-decoration: none;
+footer h3 {
+  margin: 15px 0;
+  font-size: 1.5rem;
+}
+
+footer p:nth-of-type(2) {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+ 
+footer ul {
+  margin: 15px 0;
+  list-style-type: none;
   height: 20px;
   color: white;
   font-size: 1.5rem;
+  display: flex;
+}
+
+footer ul li {
+  padding: 0 25px 0 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
 }
