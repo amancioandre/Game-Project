@@ -2,7 +2,7 @@ console.log('setup.js loaded')
 
 // Musics Array
 const LEVEL_ARRAY = [
-  { name: 'Charon', path: './../../Media/music/charon.mp3', mood: 'angry' },
+  { name: 'Charon', path: '../../../Game-Project/Media/music/charon.mp3', mood: 'angry' },
   { name: 'Paragon', path: '../../Media/music/paragon.mp3', mood: 'exhiliration' },
   { name: 'Truth Inside', path: '../../Media/music/truth inside.mp3', mood: 'anxiety' },
 ]
