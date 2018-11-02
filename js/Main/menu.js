@@ -1,10 +1,19 @@
-function startGame() {
-  game.plugPlayer();
+function startGame(n) {
+  if(n === 1) {
+    game.plugPlayer();
+  }
+  if(n === 2) {
+    game.plugPlayer();
+    game.plugPlayer();
+  }
+
+  let menu = document.getElementById('menu');
+  menu.setAttribute('style', 'display: none;');
+
   game.start = true;
   const load = setTimeout(() => {
     game.topology.level[0].music.play();
   }, 2000)
-  
 }
 
 function pauseGame() {
@@ -22,6 +31,6 @@ function pauseGame() {
 }
 
 function resetGame() {
-// ????????????????????????
+  // ????????????????????????
 }
 

@@ -1,30 +1,67 @@
 #menu {
   position: absolute;
   z-index: 10;
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
   top: 40vh;
   left: calc(50vw - 250px);
   width: 500px;
   height: 300px;
-  border: 2px solid #160416;
-  border-radius: 15px;
-  background-color: #161616;
   color: white;
+  text-align: center;
+}
+
+#menu div {
+  width: 100%;
+}
+
+#menu p {
+  margin: 30px 0 ;
+  font-size: 1.2rem;
+}
+
+#menu img {
+  height: 100px;
+}
+
+#menu div:nth-of-type(2) {
+  display: flex;
+  padding: 20px;
+  justify-content: space-around;
+  box-sizing: border-box;
 }
 
 .btn {
   width: 200px;
   height: 50px;
   outline: none;
-  background-color: #160416;
+  background-color: #3b003b;
   color: white;
   font-size: 1.2rem;
+  letter-spacing: 2px;
   text-transform: uppercase;
   border: none;
   border-radius: 4px;
-  box-shadow: 5px 5px black;
+  box-shadow: 0 6px #160416;
 }
 
-.btn:hover {
-  box-shadow: none;
+#onePlayer:hover {
+  margin: 2px 0;
+  box-shadow: 0 4px #160416;
+}
+
+#onePlayer:active {
+  margin: 6px 0;
+  box-shadow: 0 0 #160416;
+}
+
+#twoPlayers:hover {
+  margin: 2px 0;
+  box-shadow: 0 4px #160416;
+}
+
+#twoPlayers:active {
+  margin: 6px 0;
+  box-shadow: 0 0 #160416;
 }

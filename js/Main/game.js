@@ -12,13 +12,13 @@ class Game {
     this.players = [];
     this.topology = new Topology(w, h, startPos);
 
-    this.loop = true;
+    this.start = false;
+    this.pause = false;
   }
 
   // PLAYERS
-  plugPlayer(name1, name2) {
-    this.players.push(new Player(name1));
-    this.players.push(new Player(name2));
+  plugPlayer(name) {
+    this.players.push(new Player(name));
   }
 
   // CONTROLERS

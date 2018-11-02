@@ -18,10 +18,16 @@ window.onload = () => {
 
   //BUTTONS SETUP
     // NAV BUTTONS
-  let start = document.getElementById('start')
+  let onePlayer = document.getElementById('onePlayer')
+  let twoPlayers = document.getElementById('twoPlayers')
   let pause = document.getElementById('pause')
 
 
-  start.addEventListener('click', startGame);
+  onePlayer.addEventListener('click', () => {
+    startGame(1)
+  });
+  twoPlayers.addEventListener('click', () => {
+    startGame(2)
+  });
   pause.addEventListener('click', pauseGame)
 };

@@ -1,121 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.js" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.min.css">
-  
-    <link rel="stylesheet" href="./css//index.css">
-    <link rel="stylesheet" href="./css/menu.css">
-    <title>Game Project : André STORM|AMNC| #Ironhack</title>
-</head>
-<body>
-    <nav>
-        <img src="./Media/images/icons/artificial-intelligence.png" alt="Game Logo">
-        <ul>
-            <li><a href="#">Back to Game</a></li>
-            <li><a href="#instructions">Instructions</a></li>
-            <li id="start"><a href="#">Start</a></li>
-            <li id="pause"><a href="#">Pause</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
-    </nav>
-    <section id="game">
-        <div id="menu">
-            <img src="./Media/images/icons/artificial-intelligence.png" alt="icon">
-            <h1>MyGame</h1>
-            <p id="quote">"Without craftsmanship, inspiration is mere reed shaken in the wind" [Dr. Brahms]</p>
-            <button class="btn">One Player</button>
-            <button class="btn">Two Players</button>
-        </div>
-    </section>
-    <section id="instructions">
-        <h2>Game Instructions!</h2>
-        <div class="pitch">
-            <h4>The Game Lore</h4>
-            <p>After all wars the world collaped into a massive desert.
-                Inside this massive beast the only thing that could exist is pressure.
-            </p>
-        </div>
-        <div class="movements">
-            <h4>Players Movement</h4>
-            <div class="controls">
-                <div class="spacebar"><i class="icon window minimize"></i></div>
-                <ul>
-                    <li><i class="upper-left icon"></i></li>
-                    <li><i class="upper-middle icon caret square up"></i></li>
-                    <li><i class="upper-right icon"></i></li>
-                    <li><i class="icon caret square left"></i></li>
-                    <li><i class="icon caret square down"></i></li>
-                    <li><i class="icon caret square right"></i></li>
-                </ul>
-            </div>
-            <p>Use the arrows left and right to control your character <strong>run</strong> to the left or right.</p>
-            <p>Use the up arrow near a wall to <strong>climb</strong> it.</p>
-            <p>The down arrow does not do anything... <strong>for now</strong>!</p>
-            <p>Press spacebar to <strong>jump</strong> a moderate humanly possible amount.</p>
-        </div>
-        <div>
-            <h4>Rules! So many, ermmm... few!</h4>
-            <p>You gain points by finishing as close to the end of the song as you can!
-                "Run against da' clock ma' boy" (Hyrule Mad King, 2006).
-            </p>
-        </div>
-    </section>
-    <section id="about">
-        <div>
-            <h2>About the Game Idea</h2>
-            <p>We've always wished to feel music, travel along it within our memories and feelings. This game is a tribute to this desire, a sinestesic feel to music and sound. We try to imagine sound, we figured out how its fisics works but we've never climbed it, jumped over it, exhilirate ourselves by touching it.</p>
-        </div>
-        <div>
-            <h2>Methodology</h2>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-        </div>
-        <div>
-            <h2>Bugs and Known Issues</h2>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-        </div>
-        <div>
-            <h2>Credits</h2>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-        </div>
-    </section>
-    <footer id="contact">
-        <div>
-            <div>
-                <img src="./Media/images/me.jpeg" alt="me">
-                <h3>André Amâncio de Moraes <i class="github alternate"></i></h3>
-                <p>Fullstack JavaScript Web Developer - <strong>MERN</strong> <strong>Ironhack</strong></p>            
-            </div>
-        </div>
-        <div>
-                <p>Master in Mechanical Engineering and Mechanical Engineer since 2016,</p>
-                <p>I'm passionate about creativity and challenging myself and I'm always
-                        dreaming about new ways to see the world around us.</p>
-            <ul>
-                <li><a href=""><i class="icon github alternate"></i></a></li>
-                <li><a href=""><i class="icon linkedin alternate"></i></a></li>
-                <li><a href=""><i class="icon medium alternate"></i></a></li>
-            </ul>
-        </div>
-    </footer>
 
-    
-    <script src="./js/loader.js" type="text/javascript"></script>
-    <script src="./js/Main/properties.js" type="text/javascript"></script>
-    <script src="./js/Setup/setup.js" type="text/javascript"></script>
-    <script src="./js/Components/Player/player.js" type="text/javascript"></script>
-    <script src="./js/Components/Topology/topology.js" type="text/javascript"></script>
-    <script src="./js/Main/game.js" type="text/javascript"></script>
-    <script src="./js/Main/menu.js" type="text/javascript"></script>
-    <script src="./js/test.js" type="text/javascript"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.min.css">
+
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/menu.css">
+  <title>Game Project : André STORM|AMNC| #Ironhack</title>
+</head>
+
+<body>
+  <nav>
+    <img src="./Media/images/icons/sound-waves.png" alt="Game Logo">
+    <ul>
+      <li><a href="#">Back to Game</a></li>
+      <li><a href="#instructions">Instructions</a></li>
+      <li id="start"><a href="#">Start</a></li>
+      <li id="pause"><a href="#">Pause</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+  <section id="game">
+    <div id="menu">
+      <div>
+        <img src="./Media/images/icons/sound-waves.png" alt="icon">
+        <h1>Chill out, dude!</h1>
+        <p id="quote">"Without craftsmanship, inspiration is mere reed shaken in the wind" [Dr. Brahms]</p>    
+      </div>
+      <div>
+          <button id="onePlayer" class="btn">One Player</button>
+          <button id="twoPlayers" class="btn">Two Players</button>
+      </div>
+    </div>
+  </section>
+  <section id="instructions">
+    <h2>Game Instructions!</h2>
+    <div class="pitch">
+      <h4>The Game Lore</h4>
+      <p>After all wars the world collaped into a massive desert.
+        Inside this massive beast the only thing that could exist is pressure.
+      </p>
+    </div>
+    <div class="movements">
+      <h4>Players Movement</h4>
+      <div class="controls">
+        <div class="spacebar"><i class="icon window minimize"></i></div>
+        <ul>
+          <li><i class="upper-left icon"></i></li>
+          <li><i class="upper-middle icon caret square up"></i></li>
+          <li><i class="upper-right icon"></i></li>
+          <li><i class="icon caret square left"></i></li>
+          <li><i class="icon caret square down"></i></li>
+          <li><i class="icon caret square right"></i></li>
+        </ul>
+      </div>
+      <p>Use the arrows left and right to control your character <strong>run</strong> to the left or right.</p>
+      <p>Use the up arrow near a wall to <strong>climb</strong> it.</p>
+      <p>The down arrow does not do anything... <strong>for now</strong>!</p>
+      <p>Press spacebar to <strong>jump</strong> a moderate humanly possible amount.</p>
+    </div>
+    <div>
+      <h4>Rules! So many, ermmm... few!</h4>
+      <p>You gain points by finishing as close to the end of the song as you can!
+        "Run against da' clock ma' boy" (Hyrule Mad King, 2006).
+      </p>
+    </div>
+  </section>
+  <section id="about">
+    <div>
+      <h2>About the Game Idea</h2>
+      <p>We've always wished to feel music, travel along it within our memories and feelings. This game is a tribute to
+        this desire, a sinestesic feel to music and sound. We try to imagine sound, we figured out how its fisics works
+        but we've never climbed it, jumped over it, exhilirate ourselves by touching it.</p>
+    </div>
+    <div>
+      <h2>Methodology</h2>
+      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum."</p>
+    </div>
+    <div>
+      <h2>Bugs and Known Issues</h2>
+      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum."</p>
+    </div>
+    <div>
+      <h2>Credits</h2>
+      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum."</p>
+    </div>
+  </section>
+  <footer id="contact">
+    <div>
+      <div>
+        <img src="./Media/images/me.jpeg" alt="me">
+        <h3>André Amâncio de Moraes <i class="github alternate"></i></h3>
+        <p>Fullstack JavaScript Web Developer - <strong>MERN</strong> <strong>Ironhack</strong></p>
+      </div>
+    </div>
+    <div>
+      <p>Master in Mechanical Engineering and Mechanical Engineer since 2016,</p>
+      <p>I'm passionate about creativity and challenging myself and I'm always
+        dreaming about new ways to see the world around us.</p>
+      <ul>
+        <li><a href=""><i class="icon github alternate"></i></a></li>
+        <li><a href=""><i class="icon linkedin alternate"></i></a></li>
+        <li><a href=""><i class="icon medium alternate"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+
+
+  <script src="./js/loader.js" type="text/javascript"></script>
+  <script src="./js/Main/properties.js" type="text/javascript"></script>
+  <script src="./js/Setup/setup.js" type="text/javascript"></script>
+  <script src="./js/Components/Player/player.js" type="text/javascript"></script>
+  <script src="./js/Components/Topology/topology.js" type="text/javascript"></script>
+  <script src="./js/Main/game.js" type="text/javascript"></script>
+  <script src="./js/Main/menu.js" type="text/javascript"></script>
+  <script src="./js/test.js" type="text/javascript"></script>
 </body>
+
 </html>

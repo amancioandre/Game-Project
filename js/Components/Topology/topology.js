@@ -56,7 +56,7 @@ class Topology {
     } else if (time / totalTime > 0.80) {
       index = 4;
     }
-    background(this.mood.anxiety[index]);
+    background(this.mood.anxiety[index])
   }
 
   foregroundRender(player) {
